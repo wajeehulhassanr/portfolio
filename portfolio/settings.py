@@ -27,7 +27,7 @@ SECRET_KEY = "django-insecure-zvr91)g=q_bxqvg_(14_olnt%4-0m*+4zh6oxneua0%tfon6@3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app"]
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -54,7 +54,15 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "django.middleware.security.SecurityMiddleware"
 ]
+
+# Enable Gzip compression for static files
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+
 
 ROOT_URLCONF = "portfolio.urls"
 
@@ -76,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "portfolio.wsgi.application"
+# WSGI_APPLICATION = "portfolio.wsgi.application"
 
 
 # Database
@@ -139,3 +147,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+# portfolio/settings.py
+WSGI_APPLICATION = 'portfolio.wsgi.application'
