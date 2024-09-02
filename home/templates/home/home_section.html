@@ -24,7 +24,7 @@
 
 <!-- home/templates/home/home_page.html -->
 {% extends 'base.html' %}
-
+{% load static %}
 {% block home_content %}
 <div class="section__pic-container">
     <img src="{{ home_section.profile_picture.url }}" alt="{{ home_section.name }} profile picture" />
