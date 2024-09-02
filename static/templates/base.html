@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="static/css/style.css" />
-    <link rel="stylesheet" href="static/css/mediaqueries.css" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/mediaqueries.css' %}" />
+
+    <!-- <link rel="stylesheet" href="static/css/style.css " />
+    <link rel="stylesheet" href="static/css/mediaqueries.css" /> -->
   </head>
   <body>
     <nav id="desktop-nav">
@@ -77,7 +80,7 @@
       </nav>
       <p>Copyright &#169; 2023 Wajeeh Ul Hassan. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="{% static 'css/script.js' %}"></script>
     <!-- <script src="{% static 'js/scripts.js' %}"></script> -->
   </body>
 </html>
