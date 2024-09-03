@@ -26,11 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = os.getenv('SECRET_KEY')
 
-# Make sure to handle the case where the SECRET_KEY might not be set
-if not SECRET_KEY:
-    raise ValueError("No SECRET_KEY set for Django application")
+# # Make sure to handle the case where the SECRET_KEY might not be set
+# if not SECRET_KEY:
+#     raise ValueError("No SECRET_KEY set for Django application")
+
+SECRET_KEY="django-insecure-zvr91)g=q_bxqvg_(14_olnt%4-0m*+4zh6oxneua0%tfon6@3"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
