@@ -160,4 +160,4 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 
 # portfolio/settings.py
-WSGI_APPLICATION = 'portfolio.wsgi.application'
+WSGI_APPLICATION = 'portfolio.wsgi.app'
