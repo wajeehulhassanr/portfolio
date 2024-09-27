@@ -66,7 +66,6 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    "django.middleware.security.SecurityMiddleware"
 ]
 
 # Enable Gzip compression for static files
@@ -97,7 +96,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = "portfolio.wsgi.application"
+WSGI_APPLICATION = "portfolio.wsgi.application"
 
 
 # Database
@@ -159,5 +158,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 
-# portfolio/settings.py
-WSGI_APPLICATION = 'portfolio.wsgi.app'
+# # portfolio/settings.py
+# WSGI_APPLICATION = 'portfolio.wsgi.app'
