@@ -7,12 +7,12 @@
     }],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "portfolio/wsgi.py"
-
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
         },
-        { "src": "/static/(.*)", "dest": "/static/$1" },
-        { "src": "/(.*)", "dest": "manage.py" }
-
+        {
+            "src": "/(.*)",
+            "dest": "portfolio/wsgi.py"  
+        }
     ]
 }
